@@ -53,5 +53,22 @@ function getStates(){
   // Retornamos el arreglo resultante:
   return states;
 }
+```
 
 El arreglo obtenido de la función anterior tendrá los nombres de los estados.
+
+## Obteniendo lista de municipios según nombre del estado
+
+```javascript
+function getCities(state) {
+  // Aplicamos una busqueda al arreglo principal de datos:
+  let found = dataToArray().filter( element => {
+    // Retornamos el objeto del estado:
+    return element.nombre == state;
+  }
+  // Retornamos el valor de la propiedad 'municipios':
+  return found.municipios;
+}
+```
+
+El arreglo resultante tendrá los nombres de los municipios del estado consultado.
