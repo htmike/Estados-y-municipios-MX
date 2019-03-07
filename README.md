@@ -49,7 +49,7 @@ function getStates(){
   dataToArray().forEach( element => {
     // Añadimos la propiedad 'nombre' del elemento recorrido:
     states.push(element.nombre);
-  }
+  });
   // Retornamos el arreglo resultante:
   return states;
 }
@@ -65,7 +65,7 @@ function getCities(state) {
   let found = dataToArray().filter( element => {
     // Retornamos el objeto del estado:
     return element.nombre == state;
-  }
+  });
   // Retornamos el valor de la propiedad 'municipios':
   return found.municipios;
 }
