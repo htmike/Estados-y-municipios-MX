@@ -14,7 +14,7 @@ function readData() {
   // realizamos la petición:
   http.open('GET', '/municipios-341c9-export.json', false);
   // Enviamos la petición:
-	http.send();
+  http.send();
   // retornamos el valor de la petición:
   return http.response;
 }
@@ -35,3 +35,23 @@ function dataToArray() {
 }
 ```
 
+El arreglo resultante tendrá las propiedades
+- *nombre*: String
+- *municipios*: String[]
+
+## Obteniendo lista de estados
+
+```javascript
+function getStates(){
+  // Creamos un arreglo vacío para retornar:
+  var states = new Array();
+  // Recorremos el arreglo de datos:
+  dataToArray().forEach( element => {
+    // Añadimos la propiedad 'nombre' del elemento recorrido:
+    states.push(element.nombre);
+  }
+  // Retornamos el arreglo resultante:
+  return states;
+}
+
+El arreglo obtenido de la función anterior tendrá los nombres de los estados.
